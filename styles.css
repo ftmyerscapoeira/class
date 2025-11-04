@@ -1,0 +1,70 @@
+/* GENERAL STYLES */
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; }
+a { text-decoration: none; color: inherit; }
+
+/* HEADER */
+header {
+    background: url('zebra-pattern.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+header .header-footer {
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* DROPDOWN MENU */
+header select {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+/* CONTENT CARDS */
+.week-card {
+    background: white;
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.week-card h2 { margin-top: 0; }
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+.video-container iframe,.video-container video {
+    width: 100%;
+    max-width: 560px;
+    height: 180px;
+    border: none;
+    border-radius: 8px;
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:10px;
+    margin-top: 40px;
+}
