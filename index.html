@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="styles.css">
+
+<title>Week 1 - Capoeira Class</title>
+
+</head>
+<body>
+
+<header>
+    <div class="header-footer">
+    <h1>Capoeira Classes</h1>
+    
+    <label for="weekDropdown"></label>
+    <select id="weekDropdown">
+        <option value="">--Select Week--</option>
+    </select>
+    </div>
+</header>
+
+<!-- CLASS CONTENT -->
+<section class="week-card">
+    <h2>Song</h2>
+    <p><strong>Sim, Sim Sim</strong></p>
+    <div class="video-container">
+        <iframe width="320" height="180" src="https://www.youtube.com/embed/B06bR4_ZnSI?list=RDB06bR4_ZnSI" title="Oh Sim, Sim, Sim" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section class="week-card">
+    <h2>Moves for This Class</h2>
+    <ul>
+        <li>
+            <strong>Negativa</strong>: Basic defensive low stance.
+            <div class="video-container">
+                <iframe width="688" height="387" src="https://www.youtube.com/embed/Ki-9snFCHtM" title="Negativa | CAPOEIRA MOVEMENT LIBRARY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <video width="320" height="180" controls>
+                    <source src="videos/negativa.mp4" type="video/mp4">
+                </video>
+
+            </div>
+        </li>
+        <li>
+            <strong>Au</strong>: Side cartwheel to evade attacks.
+            <div class="video-container">
+                <iframe width="1317" height="741" src="https://www.youtube.com/embed/66RUsmN-WJ8" title="Axe Capoeira Toronto - Beginner Training #4 - Au" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                <video width="320" height="180" controls>
+                    <source src="videos/au.mp4" type="video/mp4">
+                </video>
+            </div>
+        </li>
+        <li>
+            <strong>Meu Lua de Compasso</strong>: Spinning kick with hands flat.
+            <div class="video-container">
+                <iframe width="1317" height="741" src="https://www.youtube.com/embed/IiLqVCyyoPs" title="How to Do the Meia Lua de Compasso | Capoeira" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <video width="320" height="180" controls>
+                    <source src="videos/meu-lua-de-compasso.mp4" type="video/mp4">
+                </video>
+            </div>
+        </li>
+        <li>
+            <strong>Meu Lua</strong>: Circular kick from low stance.
+            <div class="video-container">
+                <iframe width="988" height="741" src="https://www.youtube.com/embed/gJIjNAJk8yU" title="Capoeira CDO Hawaii Basic Movements: Meia Lua de Frente" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                <video width="320" height="180" controls>
+                    <source src="videos/meu-lua.mp4" type="video/mp4">
+                </video>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="week-card">
+    <h2>THURSDAY'S SEQUENCE</h2>
+    <p>Negativa → Au → Rabo de Arrias → Meu Lua → repeat smoothly, linking transitions.</p>
+</section>
+
+<footer>
+    ❤️‍🔥 ONE built this with FOUR for THREE ❤️‍🔥
+</footer>
+
+<script>
+// --- CONFIG: START DATE ---
+let startDate = new Date('2025-11-05'); // adjust first class date
+
+// --- NUMBER OF WEEKS ---
+let totalWeeks = 52;
+
+// --- GENERATE DROPDOWN ---
+const dropdown = document.getElementById('weekDropdown');
+for(let i=0; i<totalWeeks; i++){
+    let classDate = new Date(startDate);
+    classDate.setDate(startDate.getDate() + i*7); // 7 days per week
+    let option = document.createElement('option');
+    option.value = `week${i+1}.html`;
+    option.textContent = `Week ${i+1} - ${classDate.toDateString()}`;
+    dropdown.appendChild(option);
+}
+
+// --- NAVIGATE ON SELECT ---
+dropdown.addEventListener('change', function(){
+    if(this.value) window.location.href = this.value;
+});
+</script>
+
+</body>
+</html>
